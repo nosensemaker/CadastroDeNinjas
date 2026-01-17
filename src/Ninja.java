@@ -1,5 +1,3 @@
-package NivelIntermediario.Desafio;
-
 public class Ninja {
     String nome;
     int idade;

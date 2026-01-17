@@ -1,5 +1,3 @@
-package NivelIntermediario.Desafio;
-
 public class Kazegake extends Ninja{
     String habilidadeEspecial;
 

@@ -1,5 +1,3 @@
-package NivelIntermediario.Desafio;
-
 public class Hyuga extends Ninja{
     String habilidadeEspecial;
 
