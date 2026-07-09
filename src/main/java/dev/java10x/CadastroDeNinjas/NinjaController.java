@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 //Annotation para todas as rotas no mesmo lugar.
 @RequestMapping
-public class Controller {
+public class NinjaController {
 
     @GetMapping("/boasVindas")
     public String boasVindas( ){
-        return "Welcome World :D.";
+        return "Welcome World :D";
     }
 
 
