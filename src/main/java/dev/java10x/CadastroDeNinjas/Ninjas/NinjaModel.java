@@ -23,6 +23,7 @@ public class NinjaModel {
     // Para passar estrategia de como vai ser passado esse ID, as duas annotations são geralmente usadas juntas
     private Long id;
     private String nome;
+    @Column(unique = true)
     private String email;
     private int idade;
 
