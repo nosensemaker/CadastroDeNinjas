@@ -21,6 +21,7 @@ public class NinjaModel {
     @Id // Logo o atributo que está abaixo dele vai ser o ID
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     // Para passar estrategia de como vai ser passado esse ID, as duas annotations são geralmente usadas juntas
+    @Column ( name = "id")
     private Long id;
 
     @Column ( name = "name")
