@@ -22,9 +22,14 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     // Para passar estrategia de como vai ser passado esse ID, as duas annotations são geralmente usadas juntas
     private Long id;
+
+    @Column ( name = "name")
     private String nome;
+
     @Column(unique = true)
     private String email;
+
+    @Column (name = "idade")
     private int idade;
 
     // Um ninja tem uma unica missão
