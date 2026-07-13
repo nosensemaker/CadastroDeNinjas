@@ -30,6 +30,9 @@ public class NinjaModel {
     @Column(unique = true)
     private String email;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
     @Column (name = "idade")
     private int idade;
 
