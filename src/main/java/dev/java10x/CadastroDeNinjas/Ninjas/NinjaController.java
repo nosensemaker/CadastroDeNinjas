@@ -2,11 +2,19 @@ package dev.java10x.CadastroDeNinjas.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 //Annotation para definir que é uma API REST.
 @RestController
 //Annotation para todas as rotas no mesmo lugar.
 @RequestMapping("ninjas")
 public class NinjaController {
+
+    private NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService){
+        this.ninjaService = ninjaService;
+    }
 
     @GetMapping("/boasvindas")
     public String boasvindas( ){
@@ -22,8 +30,8 @@ public class NinjaController {
     // Mostrar todos os Ninjas (READ)
 
     @GetMapping("/listar")
-    public String mostrarTodosOsNinja(){
-        return "Mostrar ninja";
+    public List<NinjaModel> mostrarTodosOsNinja(){
+        return ninjaService.listarNinjas();
     }
 
     // Mostrar ninja por ID  (READ)
