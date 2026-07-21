@@ -8,14 +8,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("missoes")
 public class MissoesController {
 
-
-
     // Post -- Mandar uma requisão para criar as missoes
     @PostMapping("/criar")
     public String adicionarMissao(){
         return "Missão criada";
     }
-
 
     // GET -- Mandar uma requisão para mandar as missoes
     @GetMapping("/listar")
@@ -35,7 +32,5 @@ public class MissoesController {
     public String deleteMissao(){
         return "Missao deletada";
     }
-
-
 
 }
