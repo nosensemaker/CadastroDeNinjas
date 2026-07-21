@@ -16,6 +16,8 @@ public class NinjaController {
         this.ninjaService = ninjaService;
     }
 
+
+
     @GetMapping("/boasvindas")
     public String boasvindas( ){
         return "Essa é a minha prmeira rota, seja bem vindo.";
@@ -36,9 +38,9 @@ public class NinjaController {
 
     // Mostrar ninja por ID  (READ)
 
-    @GetMapping("/listarID")
-    public String mostrarTodosOsNinjasPorID(){
-        return "Mostrar Ninja por ID";
+    @GetMapping("/listar/{id}")
+    public NinjaModel listarNinjasPorID(@PathVariable Long id){
+        return ninjaService.listarNinjasPorID(id);
 
     }
     // Alterar dados dos Ninjas(UPDATE)
