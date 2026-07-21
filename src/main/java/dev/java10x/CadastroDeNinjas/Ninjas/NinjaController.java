@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 //Annotation para definir que é uma API REST.
 @RestController
 //Annotation para todas as rotas no mesmo lugar.
-@RequestMapping
+@RequestMapping("ninjas")
 public class NinjaController {
 
     @GetMapping("/boasvindas")
@@ -21,14 +21,14 @@ public class NinjaController {
 
     // Mostrar todos os Ninjas (READ)
 
-    @GetMapping("/todos")
+    @GetMapping("/listar")
     public String mostrarTodosOsNinja(){
         return "Mostrar ninja";
     }
 
     // Mostrar ninja por ID  (READ)
 
-    @GetMapping("/todosID")
+    @GetMapping("/listarID")
     public String mostrarTodosOsNinjasPorID(){
         return "Mostrar Ninja por ID";
 
