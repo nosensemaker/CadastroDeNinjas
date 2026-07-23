@@ -27,9 +27,15 @@ public class MissoesController {
 
     // GET -- Mandar uma requisão para mandar as missoes
     @GetMapping("/listar")
-    public List<MissoesModel> adicionarMissao(){
+    public List<MissoesModel> listarMissoes(){
         return missoesService.listarMissoes();
+    }
 
+    // Get -- Listar as missoes p ID
+
+    @GetMapping("/listar/{id}")
+    public MissoesModel listarMissoesPorID(@PathVariable Long id){
+        return missoesService.listarMissoesPorID(id);
     }
 
     // PUT -- Mandar uma requisão para alterar as missoes
