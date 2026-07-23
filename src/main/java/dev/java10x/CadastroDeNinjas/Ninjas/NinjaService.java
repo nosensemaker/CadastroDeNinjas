@@ -28,7 +28,12 @@ public class NinjaService {
         return ninjaPorID.orElse(null);
     }
 
+    // Criar um novo ninja
+    // Save tem a mesma função do insert direto no banco de dados
+    public NinjaModel criarNinja(NinjaModel ninja){
+        return ninjaRepository.save(ninja);
 
+    }
 
 
 
