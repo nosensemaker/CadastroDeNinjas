@@ -2,22 +2,33 @@ package dev.java10x.CadastroDeNinjas.Missoes;
 
 // LOCALHOST:8080/
 
+import dev.java10x.CadastroDeNinjas.Ninjas.NinjaService;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("missoes")
 public class MissoesController {
 
+    private final MissoesRepository missoesRepository;
+    private MissoesService missoesService;
+
+    public MissoesController(MissoesRepository missoesRepository, MissoesRepository missoesRepository1, MissoesService missoesService) {
+        this.missoesRepository = missoesRepository;
+        this.missoesService = missoesService;
+    }
+
     // Post -- Mandar uma requisão para criar as missoes
     @PostMapping("/criar")
-    public String adicionarMissao(){
-        return "Missão criada";
+    public String adicionarMissaos(){
+        return "missao criada";
     }
 
     // GET -- Mandar uma requisão para mandar as missoes
     @GetMapping("/listar")
-    public String listarMissoes(){
-        return "Mostrar missoes";
+    public List<MissoesModel> adicionarMissao(){
+        return missoesService.listarMissoes();
 
     }
 
