@@ -41,6 +41,9 @@ public class MissoesService {
 
 
     // Deletar uma missão
+    public void deletarNinjasPorId(long id){
+        missoesRepository.deleteById(id);
+    }
 
 
 }
