@@ -32,6 +32,10 @@ public class MissoesService {
 
     // Criar uma nova missão
 
+    public MissoesModel criarMissao(MissoesModel missao){
+        return missoesRepository.save(missao);
+    }
+
 
     // Alterar uma missão
 
