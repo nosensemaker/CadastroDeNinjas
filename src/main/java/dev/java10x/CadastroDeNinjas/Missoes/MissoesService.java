@@ -23,27 +23,26 @@ public class MissoesService {
     }
 
     // Listar missoes por ID
-
     public MissoesModel listarMissoesPorID(Long id){
         Optional<MissoesModel> missoesPorID = missoesRepository.findById(id);
         return missoesPorID.orElse(null);
     }
 
-
     // Criar uma nova missão
-
     public MissoesModel criarMissao(MissoesModel missao){
         return missoesRepository.save(missao);
     }
 
-
     // Alterar uma missão
-
-
+    public MissoesModel atualizarMissoes(Long id, MissoesModel missaoAtualizada){
+        if(missoesRepository.existsById(id)){
+            missaoAtualizada.setId(id);
+            return missoesRepository.save(missaoAtualizada);
+        }
+        return  null;
+    }
     // Deletar uma missão
     public void deletarNinjasPorId(long id){
         missoesRepository.deleteById(id);
     }
-
-
 }
