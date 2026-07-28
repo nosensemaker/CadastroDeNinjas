@@ -39,9 +39,9 @@ public class MissoesController {
     }
 
     // PUT -- Mandar uma requisão para alterar as missoes
-    @PutMapping("/alterar")
-    public String alterarMissao(){
-        return "Missao alterada";
+    @PutMapping("/alterar/{id}")
+    public MissoesModel alterarMissao(@PathVariable Long id, @RequestBody MissoesModel missaoAlterada){
+        return missoesService.atualizarMissoes(id, missaoAlterada);
     }
 
     // DELETE -- Mandar uma requisão para deletar as missoes
@@ -49,5 +49,4 @@ public class MissoesController {
     public void deletarMissaoPorID(@PathVariable long id){
         missoesService.deletarNinjasPorId(id);
     }
-
 }

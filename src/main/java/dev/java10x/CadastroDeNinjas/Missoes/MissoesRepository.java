@@ -6,6 +6,4 @@ import java.util.List;
 
 public interface MissoesRepository extends JpaRepository<MissoesModel, Long> {
     Long id(Long id);
-
-    Long id(Long id);
 }
