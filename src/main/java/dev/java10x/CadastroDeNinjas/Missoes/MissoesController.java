@@ -49,4 +49,6 @@ public class MissoesController {
     public void deletarMissaoPorID(@PathVariable long id){
         missoesService.deletarNinjasPorId(id);
     }
+
+
 }

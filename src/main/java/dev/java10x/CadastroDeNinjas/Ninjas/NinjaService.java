@@ -20,21 +20,17 @@ public class NinjaService {
     public List<NinjaModel> listarNinjas(){
         return ninjaRepository.findAll();
     }
-
     // Listar todos os meus ninjas por ID
-
     public NinjaModel listarNinjasPorID(Long id){
         Optional<NinjaModel> ninjaPorID = ninjaRepository.findById(id);
         return ninjaPorID.orElse(null);
     }
-
     // Criar um novo ninja
     // Save tem a mesma função do insert direto no banco de dados
     public NinjaModel criarNinja(NinjaModel ninja){
         return ninjaRepository.save(ninja);
 
     }
-
     // Atualizar ninja
 
     public NinjaModel atualizarNinja(Long id, NinjaModel ninjaAtualizado){
